@@ -11,31 +11,31 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
-  name: "TodosForm",
+  name: 'TodosForm',
   setup(props, { emit }) {
-    const name = ref("");
+    const name = ref('')
 
     function addTodo() {
-      emit("todo-added", { name: name.value });
-      name.value = "";
+      emit('todo-added', { name: name.value })
+      name.value = ''
     }
 
     return {
       addTodo,
       name
-    };
+    }
   },
   emits: {
-    "todo-added": ({ name }) => {
+    'todo-added': ({ name }) => {
       if (name) {
-        return true;
+        return true
       } else {
-        return false;
+        return false
       }
     }
   }
-});
+})
 </script>

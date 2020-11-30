@@ -3,9 +3,9 @@ export default function id() {
   // Convert it to base 36 (numbers + letters), and grab the first 9 characters
   // after the decimal.
   return (
-    "_" +
+    '_' +
     Math.random()
       .toString(36)
       .substr(2, 9)
-  );
+  )
 }
