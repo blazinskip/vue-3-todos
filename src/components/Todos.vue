@@ -7,16 +7,31 @@
         :key="todo.id"
       >
         {{ todo.name }}
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="{2}"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </li>
     </transition-group>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "Todos",
+  name: 'Todos',
   props: {
     todos: {
       type: Array,
@@ -24,7 +39,7 @@ export default defineComponent({
     }
   },
   emits: {}
-});
+})
 </script>
 
 <style lang="scss">
