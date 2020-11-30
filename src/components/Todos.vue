@@ -1,7 +1,7 @@
 <template>
   <ul class="flex flex-col space-y-6 my-12" flex-col>
-    <li class="bg-gray-200 p-4"  v-for="todo in todos" :key="todo.key">
-      {{todo.name}}
+    <li class="bg-gray-200 p-4" v-for="todo in todos" :key="todo.key">
+      {{ todo.name }}
     </li>
   </ul>
 </template>
@@ -17,7 +17,6 @@ export default defineComponent({
       required: true
     }
   },
-  emits: {
-  }
+  emits: {}
 });
 </script>
