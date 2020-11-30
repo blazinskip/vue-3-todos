@@ -6,9 +6,7 @@
       v-model="name"
       placeholder="Add todo..."
     />
-    <button class="bg-blue-300 px-8 py-2" type="submit">
-      Add
-    </button>
+    <button class="bg-blue-300 px-8 py-2" type="submit">Add</button>
   </form>
 </template>
 

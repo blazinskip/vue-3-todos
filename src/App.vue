@@ -1,5 +1,5 @@
 <template>
-  <main class="w-1/2 mx-auto bg-gray-900 p-12">
+  <main class="w-1/2 mx-auto bg-gray-700 p-12">
     <router-view />
   </main>
 </template>
