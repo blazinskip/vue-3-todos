@@ -1,7 +1,7 @@
 <template>
   <div>
     <TodosForm v-on:todo-added="addTodo" />
-    <Todos :todos="todos" />
+    <Todos :todos="todos" v-on:todo-removed="removeTodo" />
   </div>
 </template>
 
@@ -25,9 +25,14 @@ export default defineComponent({
       todos.value = [...todos.value, { ...todo, id: id() }]
     }
 
+    function removeTodo(id: string) {
+      todos.value = todos.value.filter(({ id: todoId }) => todoId !== id)
+    }
+
     return {
       todos,
-      addTodo
+      addTodo,
+      removeTodo
     }
   }
 })

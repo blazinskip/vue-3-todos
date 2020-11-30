@@ -2,12 +2,18 @@
   <div>
     <transition-group class="todos" name="todos" tag="ul">
       <li
-        class="bg-gray-200 p-4 block w-full opacity-100"
+        class="align-middle bg-gray-200 flex items-center justify-between opacity-100 p-4 w-full"
         v-for="todo in todos"
         :key="todo.id"
       >
         {{ todo.name }}
-        <button>
+        <button
+          class="relative cursor-pointer hover:outline-none todo-close-button outline-none w-8 h-8 text-blue-900 hover:text-gray-900 group transition-colors duration-300 ease-in-out"
+          @click="remove(todo.id)"
+        >
+          <div
+            class="absolute w-full h-full bg-blue-600 opacity-0 group-hover:opacity-50 border rounded-md transition-opacity duration-300 ease-in-out"
+          ></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -38,7 +44,24 @@ export default defineComponent({
       required: true
     }
   },
-  emits: {}
+  emits: {
+    'todo-removed': (idOfTodo: string) => {
+      if (idOfTodo) {
+        return true
+      } else {
+        return false
+      }
+    }
+  },
+  setup(props, { emit }) {
+    function remove(index: string) {
+      emit('todo-removed', index)
+    }
+
+    return {
+      remove
+    }
+  }
 })
 </script>
 
@@ -72,5 +95,9 @@ export default defineComponent({
   opacity: 1;
   transform: scaleY(0);
   transform-origin: center top;
+}
+
+.todo-close-button {
+  @apply text-blue-800;
 }
 </style>
