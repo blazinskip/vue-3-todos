@@ -6,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: "TodosPage",
     component: TodosPage
-  },
+  }
 ];
 
 const router = createRouter({

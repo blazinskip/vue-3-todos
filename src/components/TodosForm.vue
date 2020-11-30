@@ -1,8 +1,5 @@
 <template>
-  <form
-    class="flex flex-grow space-x-3"
-    @submit.prevent="addTodo"
-  >
+  <form class="flex flex-grow space-x-3" @submit.prevent="addTodo">
     <input
       class="flex-grow px-4 py-2"
       type="text"
@@ -25,7 +22,7 @@ export default defineComponent({
 
     function addTodo() {
       emit("todo-added", { name: name.value });
-      name.value = '';
+      name.value = "";
     }
 
     return {
