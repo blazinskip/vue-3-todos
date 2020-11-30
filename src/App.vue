@@ -15,7 +15,11 @@ body {
 }
 
 #app {
-  @apply flex flex-col justify-center items-center bg-gray-900;
+  @apply flex;
+  @apply flex-col;
+  @apply justify-center;
+  @apply items-center;
+  @apply bg-gray-900;
   height: 100%;
 }
 
