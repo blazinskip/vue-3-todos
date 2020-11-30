@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Todos',
@@ -47,22 +47,22 @@ export default defineComponent({
   emits: {
     'todo-removed': (idOfTodo: string) => {
       if (idOfTodo) {
-        return true
+        return true;
       } else {
-        return false
+        return false;
       }
     }
   },
   setup(props, { emit }) {
     function remove(index: string) {
-      emit('todo-removed', index)
+      emit('todo-removed', index);
     }
 
     return {
       remove
-    }
+    };
   }
-})
+});
 </script>
 
 <style lang="scss">
