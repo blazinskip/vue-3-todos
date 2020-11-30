@@ -7,5 +7,5 @@ export default function id() {
     Math.random()
       .toString(36)
       .substr(2, 9)
-  )
+  );
 }
