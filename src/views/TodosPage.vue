@@ -13,12 +13,13 @@ import { Todo } from "@/model/todo";
 import id from "@/utils/id";
 
 export default defineComponent({
-  name: "HomePage",
+  name: "TodosPage",
   components: { TodosForm, Todos },
   setup() {
-    const todos = ref<Todo[]>([{ name: "First Todo", id: id() }]);
-
-    todos.value = [...todos.value, { name: "Second Todo", id: id() }];
+    const todos = ref<Todo[]>([
+      { name: "First Todo", id: id(), completed: false },
+      { name: "Second Todo", id: id(), completed: false }
+    ]);
 
     function addTodo(todo: Todo) {
       todos.value = [...todos.value, { ...todo, id: id() }];
