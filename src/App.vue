@@ -1,7 +1,11 @@
 <template>
-  <main class="w-1/2 mx-auto bg-gray-700 p-12">
-    <router-view />
-  </main>
+  <div class="flex flex-col w-screen h-screen bg-gray-900">
+    <main
+      class="w-full h-full max-w-3xl px-4 py-6 mx-auto bg-gray-700 lg:w-3/5"
+    >
+      <router-view />
+    </main>
+  </div>
 </template>
 
 <style lang="scss">
@@ -12,18 +16,5 @@
 html,
 body {
   height: 100%;
-}
-
-#app {
-  @apply flex;
-  @apply flex-col;
-  @apply justify-center;
-  @apply items-center;
-  @apply bg-gray-900;
-  height: 100%;
-}
-
-main {
-  height: 800px;
 }
 </style>
