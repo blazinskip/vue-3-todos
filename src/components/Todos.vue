@@ -1,18 +1,18 @@
 <template>
-  <div>
+  <div class="flex-1 overflow-auto">
     <transition-group class="todos" name="todos" tag="ul">
       <li
-        class="align-middle bg-gray-200 flex items-center justify-between opacity-100 p-4 w-full"
+        class="flex items-center justify-between w-full p-4 align-middle bg-gray-200 opacity-100"
         v-for="todo in todos"
         :key="todo.id"
       >
         {{ todo.name }}
         <button
-          class="relative cursor-pointer hover:outline-none todo-close-button outline-none w-8 h-8 text-blue-900 hover:text-gray-900 group transition-colors duration-300 ease-in-out"
+          class="relative w-8 h-8 text-blue-900 transition-colors duration-300 ease-in-out outline-none cursor-pointer hover:outline-none todo-close-button hover:text-gray-900 group"
           @click="remove(todo.id)"
         >
           <div
-            class="absolute w-full h-full bg-blue-600 opacity-0 group-hover:opacity-50 border rounded-md transition-opacity duration-300 ease-in-out"
+            class="absolute w-full h-full transition-opacity duration-300 ease-in-out bg-blue-600 border rounded-md opacity-0 group-hover:opacity-50"
           ></div>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col h-full">
     <TodosForm v-on:todo-added="addTodo" />
     <Todos :todos="todos" v-on:todo-removed="removeTodo" />
   </div>

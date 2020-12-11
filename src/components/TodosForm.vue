@@ -1,12 +1,12 @@
 <template>
-  <form class="flex flex-grow space-x-3" @submit.prevent="addTodo">
+  <form class="flex space-x-3" @submit.prevent="addTodo">
     <input
       class="flex-grow px-4 py-2"
       type="text"
       v-model="name"
       placeholder="Add todo..."
     />
-    <button class="bg-blue-300 px-8 py-2" type="submit">Add</button>
+    <button class="px-8 py-2 bg-blue-300" type="submit">Add</button>
   </form>
 </template>
 
